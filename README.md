@@ -1,9 +1,9 @@
 ## Overview
 
-IMDB API
-This flask application implements a REST API feeded with imdb datasets https://datasets.imdbws.com/. 
+This flask application implements a REST API feeded from imdb datasets https://datasets.imdbws.com/. 
 
-It uses flask_restless, a model driven library that expose the sqlalchemy models as endpoints resolving pagination, filtering, sorting, etc. 
+It uses flask_restless, a model driven library that expose the sqlalchemy models as endpoints resolving pagination, filtering, sorting, etc.
+
 The endpoinst and routing is manage by the framework, so we can write all the code is in just a file (app.py) for simplicity
 
 You can use docker to try the project or install it locally in your workstation:
@@ -66,12 +66,12 @@ This line loads total results sorted by startYear, you can change by any other t
 
      $curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?sort=startYear"
 
-Also there is a simple test script forin the top-level directory, to run it:
+Also there is a simple test script in the top-level directory, to run it:
 
     $ python test_app.py
 
 ### ToDo List:
 
-- Authotization: Flask-Restless currentlyUsing doesn't suppor authentification, but it could be used combined with flask-auth with this workaround https://stackoverflow.com/questions/42533259/python-flask-using-flask-restless-with-flask-httpauth
+- Authotization: Flask-Restless doesn't suppor authentification, but it could be used combined with flask-auth with this workaround https://stackoverflow.com/questions/42533259/python-flask-using-flask-restless-with-flask-httpauth
 - Get directors names, I forgot to import the name.basics table and make the model associated and now I'm running out of time.
 - Creation action, for some reason the creating is a failing (see commented test in test_app.py) and I didn't have time to debug it. 
