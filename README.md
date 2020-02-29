@@ -75,3 +75,4 @@ Also there is a simple test script in the top-level directory, to run it:
 - Authotization: Flask-Restless doesn't suppor authentification, but it could be used combined with flask-auth with this workaround https://stackoverflow.com/questions/42533259/python-flask-using-flask-restless-with-flask-httpauth
 - Get directors names, I forgot to import the name.basics table and make the model associated and now I'm running out of time.
 - Creation action, for some reason the creating is a failing (see commented test in test_app.py) and I didn't have time to debug it. 
+- Add indexes to sqlite db
