@@ -46,25 +46,25 @@ More info: https://flask-restless.readthedocs.io/en/stable/searchformat.html#que
     
 Sample query of movies with "matrix" word in the title:
     
-    $curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?q=\{\"filters\":\[\{\"name\":\"primaryTitle\",\"op\":\"like\",\"val\":\"%matrix%\"\}\]\}"
+    $ curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?q=\{\"filters\":\[\{\"name\":\"primaryTitle\",\"op\":\"like\",\"val\":\"%matrix%\"\}\]\}"
 
 Sample query of movies with "Documentary" word in the genres:
     
-    $curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?q=\{\"filters\":\[\{\"name\":\"genres\",\"op\":\"like\",\"val\":\"%Documentary%\"\}\]\}"
+    $ curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?q=\{\"filters\":\[\{\"name\":\"genres\",\"op\":\"like\",\"val\":\"%Documentary%\"\}\]\}"
 
 Sample query of movies with 30 runtime minutes:
      
-     $curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?q=\{\"filters\":\[\{\"name\":\"runtimeMinutes\",\"op\":\"eq\",\"val\":\"%30%\"\}\]\}"
+    $ curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?q=\{\"filters\":\[\{\"name\":\"runtimeMinutes\",\"op\":\"eq\",\"val\":\"%30%\"\}\]\}"
 
 #### Pagination: 
 This line loads page number 2 of the total resultset:
 
-    $curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?page=2"
+    $ curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?page=2"
 
 #### Sorting: 
 This line loads total results sorted by startYear, you can change by any other table field what you want to sort by:
 
-     $curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?sort=startYear"
+     $ curl -H "Accept: application/vnd.api+json" "http://127.0.0.1:5000/api/imdb_title_basics?sort=startYear"
 
 Also there is a simple test script in the top-level directory, to run it:
 
